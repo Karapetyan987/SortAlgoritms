@@ -12,10 +12,10 @@ namespace SS3
     public class QSort : Abs,IShow
     {
         public TimeSpan s;
-
+        public Stopwatch stopWatch = new Stopwatch();
         public override int[] Sort(int[] M)
         {
-            
+            stopWatch.Start();
             return Sort1(M, 0, M.Length - 1);
         }
         private static int Partition(int[] array, int low,
@@ -48,7 +48,8 @@ namespace SS3
 
         private int[] Sort1(int[] array, int low, int high)
         {
-            Stopwatch stopWatch = new Stopwatch(); stopWatch.Start();
+           
+            
             if (low < high)
             {
                 int partitionIndex = Partition(array, low, high);

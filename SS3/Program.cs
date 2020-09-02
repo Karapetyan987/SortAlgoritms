@@ -16,41 +16,25 @@ namespace SS3
             BubSort b = new BubSort();
             InsSort i = new InsSort();
             MerSort m = new MerSort();
-            QSort q = new QSort();
+            QSort q = new QSort();         
             Random rd = new Random();
-            Console.WriteLine("Mutqagreq zangvatsi chapsy");
-            
-            int size = int.Parse(ReadLine());
-           
+            Console.Write("Enter the size of the array...");      
+            int size = int.Parse(ReadLine());        
             int[] a = new int[size];
-            
-            
             int[] A;
             for (int j = 0; j < size; j++)
             {
                 a[j] = rd.Next(-1000, 1001);
             }
-            Console.WriteLine("Choose the Algoritm... \nBubbleSort - 1 \nInsertionSort - 2 \nMergeSort - 3 \nQuickSort - 4 \nBolory - 5");
+            Console.WriteLine("Choose one of the following algorithms... \n1 - BubbleSort  \n2 - InsertionSort \n3 - MergeSort \n4 - QuickSort \n5 - All algorithms ");
             string alg = ReadLine();
-
-          
-           
-
-            
-           
-            
-
             if (alg.Length == 1)
             {
                 switch (alg)
                 {
-                    case "1":
-                        
+                    case "1":                        
                         A = b.Sort(a);
                         b.Show(A);
-                       
-
-
                         break;
                     case "2":
                         A = i.Sort(a);
@@ -80,7 +64,6 @@ namespace SS3
             }
             else if (alg[1] == '-')
             {
-
                 int k = (int)alg[0];
                 while (k <= (int)alg[2])
                 {

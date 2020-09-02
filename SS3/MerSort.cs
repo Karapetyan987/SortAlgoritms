@@ -13,15 +13,15 @@ namespace SS3
     public class MerSort : Abs, IShow
     {
         public TimeSpan s;
-
+        public Stopwatch stopWatch = new Stopwatch(); 
         public override int[] Sort(int[] M)
         {
-           
-             return MergeSortRecursive(M, 0, M.Length - 1);
+            stopWatch.Start();
+            return MergeSortRecursive(M, 0, M.Length - 1);
         }
         private int[] MergeSortRecursive(int[] data, int left, int right)
         {
-            Stopwatch stopWatch = new Stopwatch(); stopWatch.Start();
+           
 
             if (left < right)
             {

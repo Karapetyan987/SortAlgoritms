@@ -12,11 +12,12 @@ namespace SS3
 {
     public class InsSort:Abs,IShow
     {
-        public TimeSpan s;
+        public TimeSpan s1;
 
         public override int[] Sort(int[] M)
         {
-            Stopwatch stopWatch = new Stopwatch(); stopWatch.Start();
+            Stopwatch stopWatch = new Stopwatch();
+            stopWatch.Start();
 
             for (int i = 1; i < M.Length; i++)
             {
@@ -42,13 +43,13 @@ namespace SS3
             }
             stopWatch.Stop();
 
-            s = stopWatch.Elapsed;
+            s1 = stopWatch.Elapsed;
             return M;
         }
         public void Show(int[] A)
         {
             ForegroundColor = ConsoleColor.DarkGreen;
-            Console.WriteLine($"InsertionSort\n{s}");
+            Console.WriteLine($"InsertionSort\n{s1}");
             //InsSort i = new InsSort();
             //i.Memor(A);
             ResetColor();
